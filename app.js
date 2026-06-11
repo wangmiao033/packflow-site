@@ -60,6 +60,53 @@ if (dropZone) {
 }
 
 
+// floating support widget (email + wechat)
+const PF_CONTACT = {
+  email: 'hello@example.com',          // TODO: 替换为真实客服邮箱
+  emailSubject: 'PackFlow 用户反馈',
+  wechat: 'PackFlow'                   // TODO: 替换为真实微信号
+};
+(function () {
+  const fab = document.createElement('div');
+  fab.className = 'support-fab';
+  fab.innerHTML = `
+    <div class="support-panel" role="dialog" aria-label="联系客服">
+      <h3>联系我们</h3>
+      <a class="support-item" href="mailto:${PF_CONTACT.email}?subject=${encodeURIComponent(PF_CONTACT.emailSubject)}">
+        <i class="mail-ic">✉</i>
+        <span>发邮件反馈<small>${PF_CONTACT.email}</small></span>
+      </a>
+      <button class="support-item" type="button" id="pfWechatBtn">
+        <i class="wx-ic">微</i>
+        <span>微信联系<small>点击复制微信号：${PF_CONTACT.wechat}</small></span>
+      </button>
+      <p class="support-tip" id="pfSupportTip">微信号已复制，去微信添加好友</p>
+    </div>
+    <button class="support-fab-btn" type="button" aria-label="联系客服" aria-expanded="false">💬</button>
+  `;
+  document.body.appendChild(fab);
+  const fabBtn = fab.querySelector('.support-fab-btn');
+  fabBtn.addEventListener('click', () => {
+    const open = fab.classList.toggle('open');
+    fabBtn.setAttribute('aria-expanded', open ? 'true' : 'false');
+    if (!open) fab.classList.remove('tip-on');
+  });
+  document.addEventListener('click', e => {
+    if (!fab.contains(e.target)) { fab.classList.remove('open', 'tip-on'); fabBtn.setAttribute('aria-expanded', 'false'); }
+  });
+  const wxBtn = fab.querySelector('#pfWechatBtn');
+  const tip = fab.querySelector('#pfSupportTip');
+  wxBtn.addEventListener('click', async () => {
+    try {
+      await navigator.clipboard.writeText(PF_CONTACT.wechat);
+      tip.textContent = '微信号已复制，去微信添加好友';
+    } catch (e) {
+      tip.textContent = '复制失败，微信号：' + PF_CONTACT.wechat;
+    }
+    fab.classList.add('tip-on');
+  });
+})();
+
 // v13: copy SHA256 from advanced download section
 document.querySelectorAll('[data-copy]').forEach(btn => {
   btn.addEventListener('click', async () => {
