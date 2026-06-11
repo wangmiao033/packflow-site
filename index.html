@@ -3,30 +3,80 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>PackFlow - 素材包整理工具</title>
-  <meta name="description" content="PackFlow 是面向游戏发行、渠道运营和美术协作团队的素材包整理工具。" />
+  <title>PackFlow - 素材包整理工具 | 批量解压、按尺寸分类、一键交付打包</title>
+  <meta name="description" content="PackFlow 是面向游戏发行、渠道运营和美术团队的 Windows 素材包整理工具：批量解压 zip/rar/7z，按图片真实尺寸自动分类，极简命名，生成 CSV 素材清单和交付压缩包。本地处理，不上传素材，免费下载。" />
+  <meta name="keywords" content="素材包整理,素材整理工具,批量解压,图片按尺寸分类,渠道素材,素材交付,zip rar 7z 批量解压,游戏发行素材,推广图整理,PackFlow" />
+  <meta name="robots" content="index,follow" />
+  <link rel="canonical" href="https://packflow.hnchpower.cn/" />
+  <meta property="og:type" content="website" />
+  <meta property="og:site_name" content="PackFlow" />
+  <meta property="og:locale" content="zh_CN" />
+  <meta property="og:title" content="PackFlow - 素材包整理工具 | 批量解压、按尺寸分类、一键交付打包" />
+  <meta property="og:description" content="批量解压 zip/rar/7z，按图片真实尺寸自动分类，极简命名，生成 CSV 清单和交付压缩包。本地处理，不上传素材。" />
+  <meta property="og:url" content="https://packflow.hnchpower.cn/" />
+  <meta property="og:image" content="https://packflow.hnchpower.cn/public/icon-512.png" />
+  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:title" content="PackFlow - 素材包整理工具" />
+  <meta name="twitter:description" content="批量解压 zip/rar/7z，按图片真实尺寸自动分类，极简命名，一键生成交付包。" />
+  <meta name="twitter:image" content="https://packflow.hnchpower.cn/public/icon-512.png" />
+  <meta name="theme-color" content="#070b1a" />
   <link rel="icon" type="image/svg+xml" href="public/favicon.svg" />
   <link rel="apple-touch-icon" href="public/icon-512.png" />
   <link rel="stylesheet" href="styles.css" />
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "WebSite",
+        "@id": "https://packflow.hnchpower.cn/#website",
+        "url": "https://packflow.hnchpower.cn/",
+        "name": "PackFlow",
+        "description": "素材包整理工具：批量解压、按尺寸分类、极简命名、交付打包。",
+        "inLanguage": "zh-CN",
+        "publisher": { "@id": "https://packflow.hnchpower.cn/#organization" }
+      },
+      {
+        "@type": "Organization",
+        "@id": "https://packflow.hnchpower.cn/#organization",
+        "name": "PackFlow",
+        "url": "https://packflow.hnchpower.cn/",
+        "logo": "https://packflow.hnchpower.cn/public/icon-512.png"
+      },
+      {
+        "@type": "SoftwareApplication",
+        "name": "PackFlow",
+        "operatingSystem": "Windows 10, Windows 11",
+        "applicationCategory": "UtilitiesApplication",
+        "softwareVersion": "1.0.0",
+        "inLanguage": "zh-CN",
+        "url": "https://packflow.hnchpower.cn/",
+        "downloadUrl": "https://packflow.hnchpower.cn/download",
+        "description": "面向游戏发行、渠道运营和美术团队的素材包整理工具：批量解压 zip/rar/7z，按图片真实尺寸自动分类，极简命名，生成 CSV 素材清单和交付压缩包。",
+        "offers": { "@type": "Offer", "price": "0", "priceCurrency": "CNY" }
+      }
+    ]
+  }
+  </script>
 </head>
 <body>
   <div class="cursor-glow" aria-hidden="true"></div>
   <header class="nav">
-    <a class="brand" href="index.html" aria-label="PackFlow 首页"><img class="brand-icon" src="public/icon-512.png" alt="" /><span class="brand-word">PackFlow</span></a>
+    <a class="brand" href="/" aria-label="PackFlow 首页"><img class="brand-icon" src="public/icon-512.png" alt="" /><span class="brand-word">PackFlow</span></a>
     <nav class="nav-links">
-      <a href="index.html#demo">演示</a>
-      <a href="index.html#result">效果</a>
-      <a href="features.html">功能</a>
-      <a href="guide.html">使用</a>
-      <a href="download.html">下载</a>
-      <a href="pricing.html">价格</a>
-      <a href="changelog.html">更新</a>
-      <a href="roadmap.html">路线图</a>
-      <a href="faq.html">FAQ</a>
+      <a href="/#demo">演示</a>
+      <a href="/#result">效果</a>
+      <a href="/features">功能</a>
+      <a href="/guide">使用</a>
+      <a href="/download">下载</a>
+      <a href="/pricing">价格</a>
+      <a href="/changelog">更新</a>
+      <a href="/roadmap">路线图</a>
+      <a href="/faq">FAQ</a>
     </nav>
     <div class="nav-actions">
       <button id="themeToggle" class="icon-btn" aria-label="切换主题">◐</button>
-      <a class="btn small" href="download.html">免费下载</a>
+      <a class="btn small" href="/download">免费下载</a>
     </div>
   </header>
 
@@ -41,8 +91,8 @@
         </h1>
         <p class="lead">自动解压、按尺寸分类、极简命名，最后生成一个干净的交付包。</p>
         <div class="hero-actions">
-          <a class="btn primary" href="download.html">免费下载</a>
-          <a class="btn ghost" href="pricing.html">购买 Pro</a>
+          <a class="btn primary" href="/download">免费下载</a>
+          <a class="btn ghost" href="/pricing">购买 Pro</a>
         </div>
         <div class="mini-stats">
           <div><strong data-count="700">0</strong><span>素材文件测试</span></div>
@@ -143,9 +193,9 @@
     </section>
 
     <section class="cards three compact-section">
-      <a class="card reveal" href="features.html"><h3>完整功能</h3><p>解压、汇聚、分类、命名、打包。</p><span>看功能 →</span></a>
-      <a class="card reveal" href="guide.html"><h3>怎么上手</h3><p>三分钟跑完第一包。</p><span>看教程 →</span></a>
-      <a class="card reveal" href="faq.html"><h3>安全说明</h3><p>本地处理，不上传素材。</p><span>看 FAQ →</span></a>
+      <a class="card reveal" href="/features"><h3>完整功能</h3><p>解压、汇聚、分类、命名、打包。</p><span>看功能 →</span></a>
+      <a class="card reveal" href="/guide"><h3>怎么上手</h3><p>三分钟跑完第一包。</p><span>看教程 →</span></a>
+      <a class="card reveal" href="/faq"><h3>安全说明</h3><p>本地处理，不上传素材。</p><span>看 FAQ →</span></a>
     </section>
 
     <section class="pricing-preview compact-section reveal" id="pricing">
@@ -155,7 +205,7 @@
         <div class="price-mini highlight"><b>Pro</b><strong>¥99</strong><p>不限图片数，支持 rar / 7z，生成 CSV 清单。</p></div>
         <div class="price-mini"><b>Team</b><strong>¥499 / 年</strong><p>5 台设备，适合发行团队。</p></div>
       </div>
-      <div class="center-actions"><a class="btn primary" href="pricing.html">查看完整价格</a><a class="btn ghost" href="download.html">先下载 Free</a></div>
+      <div class="center-actions"><a class="btn primary" href="/pricing">查看完整价格</a><a class="btn ghost" href="/download">先下载 Free</a></div>
     </section>
 
     <section class="download compact-section reveal" id="download">
@@ -164,7 +214,7 @@
       <p>本地处理素材，不上传文件。适合先跑一包真实项目试试。</p>
       <div class="download-panel">
         <div><h3>PackFlow v1.0.0</h3><ul><li>系统：Windows 10 / Windows 11</li><li>格式：Windows 安装包</li><li>更新时间：2026-06-11</li><li>用途：素材包整理与交付打包</li></ul></div>
-        <div class="download-actions"><a class="btn primary" href="download.html">免费下载</a><a class="btn ghost" href="changelog.html">查看更新</a></div>
+        <div class="download-actions"><a class="btn primary" href="/download">免费下载</a><a class="btn ghost" href="/changelog">查看更新</a></div>
       </div>
       <div class="security-note"><b>安全说明</b><p>当前版本未做代码签名，Windows 可能提示“未知发布者”。建议仅从本站下载。</p></div>
     </section>
@@ -172,7 +222,7 @@
     <section class="roadmap-teaser compact-section reveal">
       <div class="section-head"><p class="eyebrow">下一步</p><h2>不止整理，还要做素材验收。</h2></div>
       <div class="roadmap-mini"><span>渠道尺寸规则检查</span><span>缺图检测</span><span>图片大小超限提醒</span><span>重复图检测</span><span>素材验收报告</span></div>
-      <div class="center-actions"><a class="btn ghost" href="roadmap.html">查看路线图</a></div>
+      <div class="center-actions"><a class="btn ghost" href="/roadmap">查看路线图</a></div>
     </section>
   </main>
 
