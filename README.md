@@ -21,7 +21,7 @@ https://wangmiao033.github.io/packflow-site/
 
 Windows 安装包：
 
-https://download.hnchpower.cn/releases/v1.0.0/PackFlow_Setup_v1.0.0.exe
+https://download.hnchpower.cn/v1.0.0/PackFlow_Setup_v1.0.0.exe
 
 当前版本：v1.0.0
 
