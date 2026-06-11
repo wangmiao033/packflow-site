@@ -1,147 +1,149 @@
-<!doctype html>
+﻿<!doctype html>
 <html lang="zh-CN">
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>PackFlow - 素材包批量解压、图片尺寸分类、重命名与打包工具</title>
-  <meta name="description" content="PackFlow 是面向游戏发行、渠道运营和美术协作团队的素材包整理工具，支持批量解压 zip、rar、7z，自动汇聚图片，按真实尺寸分类，极简重命名，生成素材清单和最终交付压缩包。" />
+  <title>PackFlow - 素材包整理工具</title>
+  <meta name="description" content="PackFlow 是面向游戏发行、渠道运营和美术协作团队的素材包整理工具。" />
+  <link rel="icon" type="image/svg+xml" href="public/favicon.svg" />
+  <link rel="apple-touch-icon" href="public/icon-512.png" />
   <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
   <div class="cursor-glow" aria-hidden="true"></div>
   <header class="nav">
-    <a class="brand" href="index.html"><span>PF</span>PackFlow</a>
+    <a class="brand" href="index.html" aria-label="PackFlow 首页"><img class="brand-icon" src="public/icon-512.png" alt="" /><span class="brand-word">PackFlow</span></a>
     <nav class="nav-links">
-      <a href="index.html#demo">演示</a>
-      <a href="index.html#result">效果</a>
-      <a href="features.html">功能</a>
-      <a href="guide.html">使用</a>
-      <a href="download.html">下载</a>
-      <a href="pricing.html">价格</a>
-      <a href="changelog.html">更新</a>
+      <a href="index.html#demo">婕旂ず</a>
+      <a href="index.html#result">鏁堟灉</a>
+      <a href="features.html">鍔熻兘</a>
+      <a href="guide.html">浣跨敤</a>
+      <a href="download.html">涓嬭浇</a>
+      <a href="pricing.html">浠锋牸</a>
+      <a href="changelog.html">鏇存柊</a>
       <a href="roadmap.html">路线图</a>
       <a href="faq.html">FAQ</a>
     </nav>
     <div class="nav-actions">
-      <button id="themeToggle" class="icon-btn" aria-label="切换主题">◐</button>
-      <a class="btn small" href="download.html">免费下载</a>
+      <button id="themeToggle" class="icon-btn" aria-label="鍒囨崲涓婚">鈼</button>
+      <a class="btn small" href="download.html">鍏嶈垂涓嬭浇</a>
     </div>
   </header>
 
   <main>
     <section class="hero">
       <div class="hero-copy reveal">
-        <p class="eyebrow">给渠道素材一点秩序</p>
-        <h1 class="hero-title hero-title-live" aria-label="一堆素材包，直接丢给 PackFlow。">
-          <span class="title-block t1">一堆素材包，</span><br>
-          <span class="title-block t2">直接丢给</span>
-          <span class="title-block t3">PackFlow。</span>
+        <p class="eyebrow">缁欐笭閬撶礌鏉愪竴鐐圭З搴</p>
+        <h1 class="hero-title hero-title-live" aria-label="涓€鍫嗙礌鏉愬寘锛岀洿鎺ヤ涪缁?PackFlow銆?>
+          <span class="title-block t1">涓€鍫嗙礌鏉愬寘锛</span><br>
+          <span class="title-block t2">鐩存帴涓㈢粰</span>
+          <span class="title-block t3">PackFlow銆</span>
         </h1>
-        <p class="lead">自动解压、按尺寸分类、极简命名，最后生成一个干净的交付包。</p>
+        <p class="lead">鑷姩瑙ｅ帇銆佹寜灏哄鍒嗙被銆佹瀬绠€鍛藉悕锛屾渶鍚庣敓鎴愪竴涓共鍑€鐨勪氦浠樺寘銆</p>
         <div class="hero-actions">
-          <a class="btn primary" href="download.html">免费下载</a>
-          <a class="btn ghost" href="pricing.html">购买 Pro</a>
+          <a class="btn primary" href="download.html">鍏嶈垂涓嬭浇</a>
+          <a class="btn ghost" href="pricing.html">璐拱 Pro</a>
         </div>
         <div class="mini-stats">
-          <div><strong data-count="700">0</strong><span>素材文件测试</span></div>
-          <div><strong>001.jpg</strong><span>极简命名</span></div>
-          <div><strong>CSV</strong><span>清单留底</span></div>
+          <div><strong data-count="700">0</strong><span>绱犳潗鏂囦欢娴嬭瘯</span></div>
+          <div><strong>001.jpg</strong><span>鏋佺畝鍛藉悕</span></div>
+          <div><strong>CSV</strong><span>娓呭崟鐣欏簳</span></div>
         </div>
         <div class="trust-strip">
-          <span>本地处理，不上传素材</span>
-          <span>支持 Windows 10 / 11</span>
-          <span>适合渠道素材交付</span>
+          <span>鏈湴澶勭悊锛屼笉涓婁紶绱犳潗</span>
+          <span>鏀寔 Windows 10 / 11</span>
+          <span>閫傚悎娓犻亾绱犳潗浜や粯</span>
         </div>
       </div>
 
-      <div class="hero-panel reveal" aria-label="PackFlow 软件预览">
+      <div class="hero-panel reveal" aria-label="PackFlow 杞欢棰勮">
         <div class="window-top"><i></i><i></i><i></i><span>PackFlow v1.0</span></div>
-        <div class="input-line"><em>输入文件夹</em><b>H:/素材包/全部推光图</b><button>选择</button></div>
-        <div class="input-line"><em>输出文件夹</em><b>H:/整理输出</b><button>选择</button></div>
+        <div class="input-line"><em>杈撳叆鏂囦欢澶</em><b>H:/绱犳潗鍖?鍏ㄩ儴鎺ㄥ厜鍥</b><button>閫夋嫨</button></div>
+        <div class="input-line"><em>杈撳嚭鏂囦欢澶</em><b>H:/鏁寸悊杈撳嚭</b><button>閫夋嫨</button></div>
         <div class="checks">
-          <p>✓ 汇聚所有素材到一个文件夹</p>
-          <p>✓ 按真实图片尺寸自动分类</p>
-          <p>✓ 极简命名：001.jpg / 002.jpg</p>
-          <p>✓ 生成 final_materials.zip</p>
+          <p>鉁?姹囪仛鎵€鏈夌礌鏉愬埌涓€涓枃浠跺す</p>
+          <p>鉁?鎸夌湡瀹炲浘鐗囧昂瀵歌嚜鍔ㄥ垎绫</p>
+          <p>鉁?鏋佺畝鍛藉悕锛?01.jpg / 002.jpg</p>
+          <p>鉁?鐢熸垚 final_materials.zip</p>
         </div>
-        <div class="fake-log">素材整理完成：699 个文件<br>图片尺寸统计 Top 20：1024x1024 / 1080x1920<br>最终压缩包：final_materials.zip</div>
+        <div class="fake-log">绱犳潗鏁寸悊瀹屾垚锛?99 涓枃浠?br>鍥剧墖灏哄缁熻 Top 20锛?024x1024 / 1080x1920<br>鏈€缁堝帇缂╁寘锛歠inal_materials.zip</div>
       </div>
     </section>
 
     <section class="worker-demo reveal" id="demo">
       <div class="section-head">
-        <p class="eyebrow">互动演示</p>
-        <h2>小人开工，素材变干净。</h2>
+        <p class="eyebrow">浜掑姩婕旂ず</p>
+        <h2>灏忎汉寮€宸ワ紝绱犳潗鍙樺共鍑€銆</h2>
       </div>
 
       <div class="demo-grid">
         <div class="drop-zone" id="dropZone">
-          <div class="drop-icon">📦</div>
-          <h3>把素材包丢进来</h3>
-          <p>模拟处理 16 个素材包。</p>
-          <button class="btn primary" id="runDemo">开始整理</button>
+          <div class="drop-icon">馃摝</div>
+          <h3>鎶婄礌鏉愬寘涓㈣繘鏉</h3>
+          <p>妯℃嫙澶勭悊 16 涓礌鏉愬寘銆</p>
+          <button class="btn primary" id="runDemo">寮€濮嬫暣鐞</button>
         </div>
 
-        <div class="factory" id="factory" aria-label="素材整理小人动画">
+        <div class="factory" id="factory" aria-label="绱犳潗鏁寸悊灏忎汉鍔ㄧ敾">
           <div class="factory-track"></div>
           <div class="messy-packs">
             <span class="pack zip">zip</span><span class="pack rar">rar</span><span class="pack seven">7z</span><span class="pack zip">zip</span>
           </div>
 
-          <div class="stage s1" data-step="1"><b>扫描</b><small>看清楚有几个包</small></div>
-          <div class="stage s2" data-step="2"><b>解压</b><small>二级包也拆掉</small></div>
-          <div class="stage s3" data-step="3"><b>识别</b><small>按尺寸排队</small></div>
-          <div class="stage s4" data-step="4"><b>打包</b><small>生成交付包</small></div>
+          <div class="stage s1" data-step="1"><b>鎵弿</b><small>鐪嬫竻妤氭湁鍑犱釜鍖</small></div>
+          <div class="stage s2" data-step="2"><b>瑙ｅ帇</b><small>浜岀骇鍖呬篃鎷嗘帀</small></div>
+          <div class="stage s3" data-step="3"><b>璇嗗埆</b><small>鎸夊昂瀵告帓闃</small></div>
+          <div class="stage s4" data-step="4"><b>鎵撳寘</b><small>鐢熸垚浜や粯鍖</small></div>
 
           <div class="worker worker-a"><i class="head"></i><i class="body"></i><i class="arm"></i><i class="leg"></i></div>
           <div class="worker worker-b"><i class="head"></i><i class="body"></i><i class="arm"></i><i class="leg"></i></div>
           <div class="worker worker-c"><i class="head"></i><i class="body"></i><i class="arm"></i><i class="leg"></i></div>
 
-          <div class="size-tags"><span>1024×1024</span><span>1080×1920</span><span>1920×1080</span></div>
+          <div class="size-tags"><span>1024脳1024</span><span>1080脳1920</span><span>1920脳1080</span></div>
           <div class="final-box">final_materials.zip</div>
-          <div class="champagne">🍾</div>
+          <div class="champagne">馃嵕</div>
           <div class="confetti"><i></i><i></i><i></i><i></i><i></i><i></i></div>
         </div>
       </div>
 
       <div class="stepper" id="stepper">
-        <span class="active">1 扫描压缩包</span>
-        <span>2 深度解压</span>
-        <span>3 识别尺寸</span>
-        <span>4 重命名打包</span>
+        <span class="active">1 鎵弿鍘嬬缉鍖</span>
+        <span>2 娣卞害瑙ｅ帇</span>
+        <span>3 璇嗗埆灏哄</span>
+        <span>4 閲嶅懡鍚嶆墦鍖</span>
       </div>
-      <pre class="demo-log" id="demoLog">等待开工...</pre>
+      <pre class="demo-log" id="demoLog">绛夊緟寮€宸?..</pre>
     </section>
 
     <section class="before-after reveal" id="result">
       <div class="section-head inline">
         <div>
-          <p class="eyebrow">整理效果</p>
-          <h2>乱包进，净包出。</h2>
+          <p class="eyebrow">鏁寸悊鏁堟灉</p>
+          <h2>涔卞寘杩涳紝鍑€鍖呭嚭銆</h2>
         </div>
-        <p>首页只展示结果；复杂说明放二级页面。</p>
+        <p>棣栭〉鍙睍绀虹粨鏋滐紱澶嶆潅璇存槑鏀句簩绾ч〉闈€</p>
       </div>
       <div class="compare">
         <div class="side bad">
-          <h3>整理前</h3>
-          <pre>全部推光图/
-├─ 1024 1024 (2)_175x175...
-│  └─ 1024×1024 方图母版/
-│     ├─ 09_175x175_1.jpg
-│     └─ 09_1080x1080_3.jpg
-├─ 1080 1920_360x640...
-└─ 1500 1000_152x103...</pre>
+          <h3>鏁寸悊鍓</h3>
+          <pre>鍏ㄩ儴鎺ㄥ厜鍥?
+鈹溾攢 1024 1024 (2)_175x175...
+鈹? 鈹斺攢 1024脳1024 鏂瑰浘姣嶇増/
+鈹?    鈹溾攢 09_175x175_1.jpg
+鈹?    鈹斺攢 09_1080x1080_3.jpg
+鈹溾攢 1080 1920_360x640...
+鈹斺攢 1500 1000_152x103...</pre>
         </div>
         <div class="side good">
-          <h3>整理后</h3>
+          <h3>鏁寸悊鍚</h3>
           <pre>all_materials_flat/
-├─ 1024x1024/
-│  ├─ 001.jpg
-│  └─ 002.jpg
-├─ 1080x1920/
-│  ├─ 001.jpg
-│  └─ 002.jpg
-└─ _素材清单_manifest.csv</pre>
+鈹溾攢 1024x1024/
+鈹? 鈹溾攢 001.jpg
+鈹? 鈹斺攢 002.jpg
+鈹溾攢 1080x1920/
+鈹? 鈹溾攢 001.jpg
+鈹? 鈹斺攢 002.jpg
+鈹斺攢 _绱犳潗娓呭崟_manifest.csv</pre>
         </div>
       </div>
     </section>
@@ -149,18 +151,18 @@
     <section class="real-proof reveal">
       <div class="section-head inline">
         <div>
-          <p class="eyebrow">真实场景</p>
-          <h2>不是演示稿，是你每天会遇到的乱包。</h2>
+          <p class="eyebrow">鐪熷疄鍦烘櫙</p>
+          <h2>涓嶆槸婕旂ず绋匡紝鏄綘姣忓ぉ浼氶亣鍒扮殑涔卞寘銆</h2>
         </div>
-        <p>渠道素材经常一层套一层。PackFlow 的目标不是“能解压”，而是把结果整理到可以直接交付。</p>
+        <p>娓犻亾绱犳潗缁忓父涓€灞傚涓€灞傘€侾ackFlow 鐨勭洰鏍囦笉鏄€滆兘瑙ｅ帇鈥濓紝鑰屾槸鎶婄粨鏋滄暣鐞嗗埌鍙互鐩存帴浜や粯銆</p>
       </div>
       <div class="proof-grid">
         <div class="proof-card">
           <span class="proof-label bad-label">Before</span>
-          <h3>整理前</h3>
-          <p>多个尺寸包、二级文件夹、重复命名、长文件名，人工检查容易漏。</p>
+          <h3>鏁寸悊鍓</h3>
+          <p>澶氫釜灏哄鍖呫€佷簩绾ф枃浠跺す銆侀噸澶嶅懡鍚嶃€侀暱鏂囦欢鍚嶏紝浜哄伐妫€鏌ュ鏄撴紡銆</p>
           <div class="folder-mock messy">
-            <b>全部推光图</b>
+            <b>鍏ㄩ儴鎺ㄥ厜鍥</b>
             <span>1024 1024 (2)_175x175_to_1080x1080...</span>
             <span>1080 1920_360x640_to_1080x1920...</span>
             <span>1500 1000_152x103_to_1500x1000...</span>
@@ -169,14 +171,14 @@
         </div>
         <div class="proof-card">
           <span class="proof-label good-label">After</span>
-          <h3>整理后</h3>
-          <p>按真实尺寸归类，文件名变短，来源写入 CSV，最后生成干净交付包。</p>
+          <h3>鏁寸悊鍚</h3>
+          <p>鎸夌湡瀹炲昂瀵稿綊绫伙紝鏂囦欢鍚嶅彉鐭紝鏉ユ簮鍐欏叆 CSV锛屾渶鍚庣敓鎴愬共鍑€浜や粯鍖呫€</p>
           <div class="folder-mock clean">
             <b>all_materials_flat</b>
             <span>1024x1024 / 001.jpg</span>
             <span>1080x1920 / 001.jpg</span>
             <span>1920x1080 / 001.jpg</span>
-            <span>_素材清单_manifest.csv</span>
+            <span>_绱犳潗娓呭崟_manifest.csv</span>
           </div>
         </div>
       </div>
@@ -184,94 +186,94 @@
 
     <section class="cards three compact-section">
       <a class="card reveal" href="features.html">
-        <h3>完整功能</h3>
-        <p>解压、汇聚、分类、命名、打包。</p>
-        <span>看功能 →</span>
+        <h3>瀹屾暣鍔熻兘</h3>
+        <p>瑙ｅ帇銆佹眹鑱氥€佸垎绫汇€佸懡鍚嶃€佹墦鍖呫€</p>
+        <span>鐪嬪姛鑳?鈫</span>
       </a>
       <a class="card reveal" href="guide.html">
-        <h3>怎么上手</h3>
-        <p>三分钟跑完第一包。</p>
-        <span>看教程 →</span>
+        <h3>鎬庝箞涓婃墜</h3>
+        <p>涓夊垎閽熻窇瀹岀涓€鍖呫€</p>
+        <span>鐪嬫暀绋?鈫</span>
       </a>
       <a class="card reveal" href="faq.html">
-        <h3>安全说明</h3>
-        <p>本地处理，不上传素材。</p>
-        <span>看 FAQ →</span>
+        <h3>瀹夊叏璇存槑</h3>
+        <p>鏈湴澶勭悊锛屼笉涓婁紶绱犳潗銆</p>
+        <span>鐪?FAQ 鈫</span>
       </a>
     </section>
 
     <section class="pricing-preview compact-section reveal" id="pricing">
       <div class="section-head">
-        <p class="eyebrow">价格</p>
-        <h2>先免费用，重度整理再上 Pro。</h2>
+        <p class="eyebrow">浠锋牸</p>
+        <h2>鍏堝厤璐圭敤锛岄噸搴︽暣鐞嗗啀涓?Pro銆</h2>
       </div>
       <div class="price-mini-grid">
         <div class="price-mini">
           <b>Free</b>
-          <strong>￥0</strong>
-          <p>临时整理小素材包。</p>
+          <strong>锟?</strong>
+          <p>涓存椂鏁寸悊灏忕礌鏉愬寘銆</p>
         </div>
         <div class="price-mini highlight">
           <b>Pro</b>
-          <strong>￥49</strong>
-          <p>不限图片数，支持 rar / 7z，生成 CSV 清单。</p>
+          <strong>锟?9</strong>
+          <p>涓嶉檺鍥剧墖鏁帮紝鏀寔 rar / 7z锛岀敓鎴?CSV 娓呭崟銆</p>
         </div>
         <div class="price-mini">
           <b>Team</b>
-          <strong>￥199 / 年</strong>
-          <p>5 台设备，适合发行团队。</p>
+          <strong>锟?99 / 骞</strong>
+          <p>5 鍙拌澶囷紝閫傚悎鍙戣鍥㈤槦銆</p>
         </div>
       </div>
       <div class="center-actions">
-        <a class="btn primary" href="pricing.html">查看完整价格</a>
-        <a class="btn ghost" href="download.html">先下载 Free</a>
+        <a class="btn primary" href="pricing.html">鏌ョ湅瀹屾暣浠锋牸</a>
+        <a class="btn ghost" href="download.html">鍏堜笅杞?Free</a>
       </div>
     </section>
 
     <section class="download compact-section reveal" id="download">
-      <p class="eyebrow">下载</p>
-      <h2>下载 PackFlow Windows 版。</h2>
-      <p>本地处理素材，不上传文件。适合先跑一包真实项目试试。</p>
+      <p class="eyebrow">涓嬭浇</p>
+      <h2>涓嬭浇 PackFlow Windows 鐗堛€</h2>
+      <p>鏈湴澶勭悊绱犳潗锛屼笉涓婁紶鏂囦欢銆傞€傚悎鍏堣窇涓€鍖呯湡瀹為」鐩瘯璇曘€</p>
       <div class="download-panel">
         <div>
           <h3>PackFlow v1.0.0 Release Prep</h3>
           <ul>
-            <li>系统：Windows 10 / Windows 11</li>
-            <li>格式：Windows 发布准备包 zip</li>
-            <li>更新时间：2026-06-11</li>
-            <li>包含：PackFlow.py、图标、EXE 打包脚本、安装包脚本</li>
+            <li>绯荤粺锛歐indows 10 / Windows 11</li>
+            <li>鏍煎紡锛歐indows 鍙戝竷鍑嗗鍖?zip</li>
+            <li>鏇存柊鏃堕棿锛?026-06-11</li>
+            <li>鍖呭惈锛歅ackFlow.py銆佸浘鏍囥€丒XE 鎵撳寘鑴氭湰銆佸畨瑁呭寘鑴氭湰</li>
           </ul>
         </div>
         <div class="download-actions">
-          <a class="btn primary" href="download.html">免费下载</a>
-          <a class="btn ghost" href="changelog.html">查看更新</a>
+          <a class="btn primary" href="download.html">鍏嶈垂涓嬭浇</a>
+          <a class="btn ghost" href="changelog.html">鏌ョ湅鏇存柊</a>
         </div>
       </div>
       <div class="security-note">
-        <b>安全说明</b>
-        <p>当前版本未做代码签名，Windows 可能提示“未知发布者”。这不代表软件有病毒。建议仅从本站下载，正式商业版后续会增加安装包、版本号和代码签名。</p>
+        <b>瀹夊叏璇存槑</b>
+        <p>褰撳墠鐗堟湰鏈仛浠ｇ爜绛惧悕锛學indows 鍙兘鎻愮ず鈥滄湭鐭ュ彂甯冭€呪€濄€傝繖涓嶄唬琛ㄨ蒋浠舵湁鐥呮瘨銆傚缓璁粎浠庢湰绔欎笅杞斤紝姝ｅ紡鍟嗕笟鐗堝悗缁細澧炲姞瀹夎鍖呫€佺増鏈彿鍜屼唬鐮佺鍚嶃€</p>
       </div>
     </section>
 
     <section class="roadmap-teaser compact-section reveal">
       <div class="section-head">
-        <p class="eyebrow">下一步</p>
-        <h2>不止整理，还要做素材验收。</h2>
+        <p class="eyebrow">涓嬩竴姝</p>
+        <h2>涓嶆鏁寸悊锛岃繕瑕佸仛绱犳潗楠屾敹銆</h2>
       </div>
       <div class="roadmap-mini">
-        <span>渠道尺寸规则检查</span>
-        <span>缺图检测</span>
-        <span>图片大小超限提醒</span>
-        <span>重复图检测</span>
-        <span>素材验收报告</span>
+        <span>娓犻亾灏哄瑙勫垯妫€鏌</span>
+        <span>缂哄浘妫€娴</span>
+        <span>鍥剧墖澶у皬瓒呴檺鎻愰啋</span>
+        <span>閲嶅鍥炬娴</span>
+        <span>绱犳潗楠屾敹鎶ュ憡</span>
       </div>
       <div class="center-actions">
-        <a class="btn ghost" href="roadmap.html">查看路线图</a>
+        <a class="btn ghost" href="roadmap.html">鏌ョ湅璺嚎鍥</a>
       </div>
     </section>
   </main>
 
-  <footer>PackFlow © 2026 · v13 Download · 素材整理，不是普通解压。</footer>
+  <footer class="site-footer"><span class="footer-brand"><img class="brand-icon" src="public/icon-512.png" alt="" /><span class="brand-word">PackFlow</span></span><p>PackFlow &copy; 2026 · 素材整理，不是普通解压。</p></footer>
   <script src="app.js"></script>
 </body>
 </html>

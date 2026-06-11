@@ -1,0 +1,29 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="238" height="56" viewBox="0 0 238 56" role="img" aria-labelledby="title desc">
+  <title id="title">PackFlow logo</title>
+  <desc id="desc">PackFlow brand mark with a P, forward flow arrow, and package blocks.</desc>
+  <defs>
+    <linearGradient id="pf-blue" x1="8" y1="8" x2="50" y2="46" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#0D47FF"/>
+      <stop offset=".58" stop-color="#2A7CFF"/>
+      <stop offset="1" stop-color="#22C55E"/>
+    </linearGradient>
+    <linearGradient id="pf-word" x1="70" y1="16" x2="228" y2="42" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#0F172A"/>
+      <stop offset=".58" stop-color="#0D47FF"/>
+      <stop offset="1" stop-color="#22C55E"/>
+    </linearGradient>
+    <filter id="soft-shadow" x="-20%" y="-20%" width="140%" height="150%">
+      <feDropShadow dx="0" dy="8" stdDeviation="8" flood-color="#0D47FF" flood-opacity=".16"/>
+    </filter>
+  </defs>
+  <g filter="url(#soft-shadow)">
+    <rect x="2" y="2" width="52" height="52" rx="15" fill="#F8FBFF"/>
+    <path d="M17 40V17h20.5c7.1 0 11.7 4 11.7 10.1S44.6 37.2 37.5 37.2H28.8v-8.1h8.2c2.2 0 3.6-.8 3.6-2.4 0-1.7-1.4-2.5-3.6-2.5H25.8V40H17Z" fill="url(#pf-blue)"/>
+    <path d="M14.7 42.5c10.5 4.7 25.9 3.6 37.1-3.5" fill="none" stroke="#2A7CFF" stroke-width="4" stroke-linecap="round"/>
+    <path d="M39.4 31.3h10.3l-8.4 7.9h6.4L34.9 51.5l3.7-10.4h-6.2l7-9.8Z" fill="#22C55E"/>
+    <path d="M46.1 15.4h5.7v5.7h-5.7zM39 8.8h4.8v4.8H39z" fill="#2A7CFF" opacity=".9"/>
+  </g>
+  <text x="70" y="37" fill="url(#pf-word)" font-family="Inter, Poppins, Arial, sans-serif" font-size="27" font-weight="900" letter-spacing="-.5">PackFlow</text>
+  <circle cx="177" cy="28" r="2.3" fill="#2A7CFF"/>
+  <path d="M186 28h16" stroke="#22C55E" stroke-width="3" stroke-linecap="round"/>
+</svg>

@@ -1,0 +1,19 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="64" height="64" viewBox="0 0 64 64" role="img" aria-label="PackFlow icon">
+  <defs>
+    <linearGradient id="bg" x1="8" y1="6" x2="58" y2="58" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#0D47FF"/>
+      <stop offset=".7" stop-color="#2A7CFF"/>
+      <stop offset="1" stop-color="#22C55E"/>
+    </linearGradient>
+    <linearGradient id="p" x1="19" y1="17" x2="49" y2="43" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#FFFFFF"/>
+      <stop offset="1" stop-color="#D7E9FF"/>
+    </linearGradient>
+  </defs>
+  <rect x="5" y="5" width="54" height="54" rx="16" fill="url(#bg)"/>
+  <path d="M19 44V19h21c7.5 0 12 4.2 12 10.4S47.5 40 40 40h-9v-8.4h8.5c2.3 0 3.8-.9 3.8-2.6 0-1.8-1.5-2.7-3.8-2.7H28.2V44H19Z" fill="url(#p)"/>
+  <path d="M16 47c10.7 4.6 27.3 3.2 40-5" fill="none" stroke="#9CC7FF" stroke-width="3.8" stroke-linecap="round" opacity=".9"/>
+  <path d="M40.5 34h11L43 42h6.2L35.2 56l4.3-11.2h-6.9L40.5 34Z" fill="#22C55E"/>
+  <rect x="47" y="15" width="6" height="6" rx="1.6" fill="#B9D7FF"/>
+  <rect x="39" y="9" width="5" height="5" rx="1.4" fill="#B9D7FF" opacity=".9"/>
+</svg>
