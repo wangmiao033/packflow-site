@@ -1,13 +1,4 @@
 
-// Baidu Tongji analytics
-var _hmt = _hmt || [];
-(function() {
-  var hm = document.createElement("script");
-  hm.src = "https://hm.baidu.com/hm.js?7b126307f6faaf0b8c3baa1152a727f5";
-  var s = document.getElementsByTagName("script")[0];
-  s.parentNode.insertBefore(hm, s);
-})();
-
 const root = document.documentElement;
 const glow = document.querySelector('.cursor-glow');
 window.addEventListener('mousemove', e => {
