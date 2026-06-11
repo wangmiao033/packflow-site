@@ -1,4 +1,61 @@
 
+// page visit tracking -> Supabase page_visit_logs (admin.hnchpower.cn 后台监测)
+(function () {
+  var SUPA_URL = 'https://bypekqxsnuvqbgvdosdl.supabase.co';
+  var SUPA_KEY = 'sb_publishable_TFfmF3_7t8ceSwP1B0iKxA_sfcb5kca';
+  var THROTTLE_MS = 45000;
+  var VID_KEY = 'pf_visitor_key';
+
+  function randomId() {
+    if (typeof crypto !== 'undefined' && crypto.randomUUID) return crypto.randomUUID();
+    return 'pf_' + Date.now() + '_' + String(Math.random()).slice(2, 12);
+  }
+  function visitorKey() {
+    try {
+      var v = localStorage.getItem(VID_KEY);
+      if (v && v.length >= 8) return v;
+      v = randomId();
+      localStorage.setItem(VID_KEY, v);
+      return v;
+    } catch (e) { return randomId(); }
+  }
+  function throttled(path) {
+    try {
+      var key = 'pf_pvl:' + path;
+      var now = Date.now();
+      var last = parseInt(sessionStorage.getItem(key) || '0', 10);
+      if (now - last < THROTTLE_MS) return true;
+      sessionStorage.setItem(key, String(now));
+      return false;
+    } catch (e) { return false; }
+  }
+  var path = (location.pathname || '/') + (location.search || '');
+  if (path.length > 2048) path = path.slice(0, 2048);
+  if (throttled(path)) return;
+  var row = {
+    path: path,
+    url: location.href.slice(0, 2048),
+    page_type: 'packflow',
+    referrer: (document.referrer || '').slice(0, 2048) || null,
+    ua: (navigator.userAgent || '').slice(0, 4096) || null,
+    visitor_key: visitorKey(),
+    is_logged_in: false
+  };
+  try {
+    fetch(SUPA_URL + '/rest/v1/page_visit_logs', {
+      method: 'POST',
+      headers: {
+        apikey: SUPA_KEY,
+        Authorization: 'Bearer ' + SUPA_KEY,
+        'Content-Type': 'application/json',
+        Prefer: 'return=minimal'
+      },
+      body: JSON.stringify(row),
+      keepalive: true
+    }).catch(function () {});
+  } catch (e) {}
+})();
+
 const root = document.documentElement;
 const glow = document.querySelector('.cursor-glow');
 window.addEventListener('mousemove', e => {
