@@ -62,9 +62,10 @@ if (dropZone) {
 
 // floating support widget (email + wechat)
 const PF_CONTACT = {
-  email: 'hello@example.com',          // TODO: 替换为真实客服邮箱
+  email: 'wangmiao@dxyx6888.com',
   emailSubject: 'PackFlow 用户反馈',
-  wechat: 'PackFlow'                   // TODO: 替换为真实微信号
+  wechat: 'yiwa033',
+  wechatName: '伊娃Chloe'
 };
 (function () {
   const fab = document.createElement('div');
@@ -78,7 +79,7 @@ const PF_CONTACT = {
       </a>
       <button class="support-item" type="button" id="pfWechatBtn">
         <i class="wx-ic">微</i>
-        <span>微信联系<small>点击复制微信号：${PF_CONTACT.wechat}</small></span>
+        <span>微信联系 ${PF_CONTACT.wechatName}<small>点击复制微信号：${PF_CONTACT.wechat}</small></span>
       </button>
       <p class="support-tip" id="pfSupportTip">微信号已复制，去微信添加好友</p>
     </div>
