@@ -1,0 +1,108 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>如何批量解压多个素材包，并按图片尺寸自动分类？ - PackFlow 资源中心</title>
+  <meta name="description" content="几十个 zip/rar/7z 压缩包混在一起，里面还嵌套二级压缩包，怎么一次性批量解压？解压后怎么按图片真实尺寸自动分类？本文讲解批量解压和尺寸分类的完整方法与注意事项。" />
+  <meta name="keywords" content="批量解压素材包,图片按尺寸分类,图片尺寸自动分类,批量整理图片" />
+  <meta name="robots" content="index,follow" />
+  <link rel="canonical" href="https://packflow.hnchpower.cn/blog/batch-unzip-size-classify" />
+  <meta property="og:type" content="article" />
+  <meta property="og:site_name" content="PackFlow" />
+  <meta property="og:locale" content="zh_CN" />
+  <meta property="og:title" content="如何批量解压多个素材包，并按图片尺寸自动分类？" />
+  <meta property="og:description" content="批量解压 zip/rar/7z 与按图片真实尺寸自动分类的完整方法与注意事项。" />
+  <meta property="og:url" content="https://packflow.hnchpower.cn/blog/batch-unzip-size-classify" />
+  <meta property="og:image" content="https://packflow.hnchpower.cn/public/icon-512.png" />
+  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:title" content="如何批量解压多个素材包并按尺寸自动分类？" />
+  <meta name="twitter:description" content="批量解压与图片尺寸自动分类的完整方法。" />
+  <meta name="twitter:image" content="https://packflow.hnchpower.cn/public/icon-512.png" />
+  <meta name="theme-color" content="#070b1a" />
+  <link rel="icon" type="image/svg+xml" href="/public/favicon.svg" />
+  <link rel="apple-touch-icon" href="/public/icon-512.png" />
+  <link rel="stylesheet" href="/styles.css" />
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Article",
+    "headline": "如何批量解压多个素材包，并按图片尺寸自动分类？",
+    "description": "批量解压 zip/rar/7z 与按图片真实尺寸自动分类的完整方法与注意事项。",
+    "inLanguage": "zh-CN",
+    "image": "https://packflow.hnchpower.cn/public/icon-512.png",
+    "datePublished": "2026-06-11",
+    "dateModified": "2026-06-11",
+    "author": { "@type": "Organization", "name": "PackFlow", "url": "https://packflow.hnchpower.cn/" },
+    "publisher": { "@type": "Organization", "name": "PackFlow", "logo": { "@type": "ImageObject", "url": "https://packflow.hnchpower.cn/public/icon-512.png" } },
+    "mainEntityOfPage": "https://packflow.hnchpower.cn/blog/batch-unzip-size-classify"
+  }
+  </script>
+</head>
+<body>
+  <div class="cursor-glow" aria-hidden="true"></div>
+  <header class="nav">
+    <a class="brand" href="/" aria-label="PackFlow 首页"><img class="brand-icon" src="/public/icon-512.png" alt="" /><span class="brand-word">PackFlow</span></a>
+    <nav class="nav-links">
+      <a href="/#demo">演示</a><a href="/#result">效果</a><a href="/features">功能</a><a href="/guide">使用</a><a href="/download">下载</a><a href="/pricing">价格</a><a href="/changelog">更新</a><a href="/roadmap">路线图</a><a href="/blog">资源中心</a><a href="/faq">FAQ</a>
+    </nav>
+    <div class="nav-actions"><button id="themeToggle" class="icon-btn" aria-label="切换主题">◐</button><a class="btn small" href="/download">免费下载</a></div>
+  </header>
+  <main class="page article-page">
+    <p class="eyebrow"><a href="/blog" style="color:inherit;text-decoration:none">资源中心</a></p>
+    <h1>如何批量解压多个素材包，并按图片尺寸自动分类？</h1>
+    <p class="article-meta">发布于 2026-06-11 · PackFlow 团队</p>
+    <article class="article-body">
+      <p>一个文件夹里躺着几十个压缩包，格式有 zip、有 rar、还有 7z，有的压缩包里还套着另一层压缩包。要把里面所有图片取出来，再按尺寸归类——这是素材整理中最耗时的环节。这篇文章讲讲批量处理的思路和注意事项。</p>
+
+      <h2>批量解压的三个难点</h2>
+      <ul>
+        <li><strong>格式混杂。</strong>zip 是开放格式随处可解，rar 和 7z 需要额外的解压引擎（如 7-Zip）。手工处理时要在不同工具间切换。</li>
+        <li><strong>嵌套压缩包。</strong>外包团队习惯把多个分包再打一个总包。只解一层的话，拿到的还是一堆压缩包，必须递归拆到真实文件为止。</li>
+        <li><strong>目录层级深。</strong>解压后图片分散在“项目/日期/版本/尺寸”等多层目录里，挨个进去复制出来非常低效，还容易漏。</li>
+      </ul>
+
+      <h2>为什么要按“真实尺寸”分类，而不是按文件名？</h2>
+      <p>很多同学习惯按文件名里标注的尺寸归档，这里有个隐蔽的坑：<strong>文件名经常是错的</strong>。设计软件导出时模板没改、二次缩放后忘了改名、外包直接复制旧文件名——这些都会导致名字和实际像素不符。渠道审核校验的是图片真实宽高，按文件名分类等于把错误一路带到提审环节。</p>
+      <p>正确的做法是读取每张图片的真实宽高（也就是图像文件头里的实际像素值），按真实值建立 1024x1024、1080x1920 这样的尺寸目录。这一步靠肉眼几乎不可行，几百张图逐张看属性的工作量和出错率都不可接受，必须交给程序。</p>
+
+      <h2>推荐的自动化处理流程</h2>
+      <ol>
+        <li><strong>集中输入。</strong>把所有压缩包放进同一个输入文件夹，不需要预先分类；</li>
+        <li><strong>递归解压。</strong>工具遍历所有 zip/rar/7z，解开后发现里面还有压缩包就继续拆，直到只剩真实文件；</li>
+        <li><strong>汇聚图片。</strong>把所有层级里的图片汇聚到一个平铺目录，告别多层文件夹；</li>
+        <li><strong>读取真实宽高并分组。</strong>按实际像素建立尺寸文件夹，每张图归入对应目录；</li>
+        <li><strong>编号命名 + 清单。</strong>目录内按 001.jpg、002.jpg 编号，同时生成 CSV 记录每张图的原始路径，需要回溯时有据可查。</li>
+      </ol>
+
+      <h2>用 PackFlow 一次跑完</h2>
+      <p>上面这条流程就是 <a href="/">PackFlow</a> 的默认工作方式：选择输入文件夹和输出文件夹，点击开始，它会自动批量解压（含嵌套包）、汇聚图片、按真实尺寸分类、极简命名，并生成 CSV 清单和 final_materials.zip 交付包。zip 开箱即用；rar 和 7z 需要电脑上装有 7-Zip。所有处理都在本地完成，素材不会上传。</p>
+      <p>实际体验上，一批包含几百张图、十几个嵌套压缩包的素材，整个流程通常几分钟内跑完，而且每次输出的目录结构完全一致。</p>
+
+      <h2>注意事项</h2>
+      <ul>
+        <li>输出文件夹建议每次新建一个空目录，避免和旧结果混在一起；</li>
+        <li>整理完先看 CSV 清单核对数量，再发交付包；</li>
+        <li>原始压缩包保留存档，清单里的来源路径能帮你随时定位原图。</li>
+      </ul>
+    </article>
+
+    <section class="article-cta">
+      <h2>把几小时的解压分类压缩到几分钟</h2>
+      <p>PackFlow 自动批量解压 zip/rar/7z，按图片真实尺寸分类，免费下载试用。</p>
+      <div class="center-actions"><a class="btn primary" href="/download">免费下载 PackFlow</a><a class="btn ghost" href="/#demo">看互动演示</a></div>
+    </section>
+
+    <section class="related-posts">
+      <h2>相关文章</h2>
+      <div class="related-grid">
+        <a href="/blog/material-package-sorting">素材包整理工具推荐：如何快速整理渠道素材？<span>阅读 →</span></a>
+        <a href="/blog/packflow-tutorial">PackFlow 使用教程：四步完成素材包整理和交付<span>阅读 →</span></a>
+        <a href="/blog/material-file-naming">素材文件命名太乱怎么办？一套适合运营团队的整理方法<span>阅读 →</span></a>
+      </div>
+    </section>
+  </main>
+  <footer class="site-footer"><span class="footer-brand"><img class="brand-icon" src="/public/icon-512.png" alt="" /><span class="brand-word">PackFlow</span></span><p><a href="/blog">资源中心</a> · PackFlow &copy; 2026 · 素材整理，不是普通解压。</p></footer>
+  <script src="/app.js"></script>
+</body>
+</html>
