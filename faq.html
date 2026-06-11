@@ -3,20 +3,69 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>FAQ - PackFlow</title>
-  <meta name="description" content="查看 PackFlow 常见问题。" />
+  <title>PackFlow 常见问题 - 安全性、rar/7z 支持、与 WinRAR 的区别</title>
+  <meta name="description" content="PackFlow 常见问题解答：与 WinRAR/Bandizip 的区别、是否上传素材、rar/7z 支持、Windows 未知发布者提示原因、素材来源信息如何保留。本地处理素材，安全可靠。" />
+  <meta name="keywords" content="PackFlow 常见问题,素材整理工具 FAQ,rar 7z 解压,未知发布者,素材安全" />
+  <meta name="robots" content="index,follow" />
+  <link rel="canonical" href="https://packflow.hnchpower.cn/faq" />
+  <meta property="og:type" content="website" />
+  <meta property="og:site_name" content="PackFlow" />
+  <meta property="og:locale" content="zh_CN" />
+  <meta property="og:title" content="PackFlow 常见问题 - 安全性、rar/7z 支持、与 WinRAR 的区别" />
+  <meta property="og:description" content="PackFlow 常见问题解答：安全性、格式支持、未知发布者提示、素材来源保留。" />
+  <meta property="og:url" content="https://packflow.hnchpower.cn/faq" />
+  <meta property="og:image" content="https://packflow.hnchpower.cn/public/icon-512.png" />
+  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:title" content="PackFlow 常见问题" />
+  <meta name="twitter:description" content="安全性、rar/7z 支持、与 WinRAR 的区别等常见问题解答。" />
+  <meta name="twitter:image" content="https://packflow.hnchpower.cn/public/icon-512.png" />
+  <meta name="theme-color" content="#070b1a" />
   <link rel="icon" type="image/svg+xml" href="public/favicon.svg" />
   <link rel="apple-touch-icon" href="public/icon-512.png" />
   <link rel="stylesheet" href="styles.css" />
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "inLanguage": "zh-CN",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "PackFlow 和 WinRAR / Bandizip 有什么区别？",
+        "acceptedAnswer": { "@type": "Answer", "text": "WinRAR 是通用压缩软件。PackFlow 面向素材交付：自动解压、抽图、按尺寸分类、重命名、再打包。" }
+      },
+      {
+        "@type": "Question",
+        "name": "PackFlow 会上传我的素材吗？",
+        "acceptedAnswer": { "@type": "Answer", "text": "不会。当前 Windows 版在本地处理，不需要把素材上传到服务器。" }
+      },
+      {
+        "@type": "Question",
+        "name": "PackFlow 支持 rar / 7z 吗？",
+        "acceptedAnswer": { "@type": "Answer", "text": "支持，但电脑需要安装 7-Zip。zip 可直接处理。" }
+      },
+      {
+        "@type": "Question",
+        "name": "为什么 Windows 提示未知发布者？",
+        "acceptedAnswer": { "@type": "Answer", "text": "因为当前版本暂未进行代码签名。建议从官网链接下载，后续商业发布版本会加入数字签名。" }
+      },
+      {
+        "@type": "Question",
+        "name": "素材来源信息会丢吗？",
+        "acceptedAnswer": { "@type": "Answer", "text": "不会。极简命名后，来源路径会记录到 _素材清单_manifest.csv。" }
+      }
+    ]
+  }
+  </script>
 </head>
 <body>
   <div class="cursor-glow" aria-hidden="true"></div>
   <header class="nav">
-    <a class="brand" href="index.html" aria-label="PackFlow 首页"><img class="brand-icon" src="public/icon-512.png" alt="" /><span class="brand-word">PackFlow</span></a>
+    <a class="brand" href="/" aria-label="PackFlow 首页"><img class="brand-icon" src="public/icon-512.png" alt="" /><span class="brand-word">PackFlow</span></a>
     <nav class="nav-links">
-      <a href="index.html#demo">演示</a><a href="index.html#result">效果</a><a href="features.html">功能</a><a href="guide.html">使用</a><a href="download.html">下载</a><a href="pricing.html">价格</a><a href="changelog.html">更新</a><a href="roadmap.html">路线图</a><a href="faq.html">FAQ</a>
+      <a href="/#demo">演示</a><a href="/#result">效果</a><a href="/features">功能</a><a href="/guide">使用</a><a href="/download">下载</a><a href="/pricing">价格</a><a href="/changelog">更新</a><a href="/roadmap">路线图</a><a href="/faq">FAQ</a>
     </nav>
-    <div class="nav-actions"><button id="themeToggle" class="icon-btn" aria-label="切换主题">◐</button><a class="btn small" href="download.html">免费下载</a></div>
+    <div class="nav-actions"><button id="themeToggle" class="icon-btn" aria-label="切换主题">◐</button><a class="btn small" href="/download">免费下载</a></div>
   </header>
   <main class="page">
     <p class="eyebrow">FAQ</p>

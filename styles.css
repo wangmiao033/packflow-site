@@ -70,8 +70,8 @@
 .folder-mock{display:grid;gap:10px;margin-top:18px;padding:18px;border-radius:20px;background:#040815;border:1px solid var(--line);font-family:ui-monospace,SFMono-Regular,Menlo,monospace}
 .folder-mock b{color:#fff;margin-bottom:4px}
 .folder-mock span{padding:9px 10px;border-radius:12px;background:rgba(255,255,255,.06);color:#dbeafe;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
-.folder-mock.clean span:before{content:"鉁?";color:#22C55E;font-weight:950}
-.folder-mock.messy span:before{content:"鈥?";color:#ffb453;font-weight:950}
+.folder-mock.clean span:before{content:"✓";color:#22C55E;font-weight:950}
+.folder-mock.messy span:before{content:"•";color:#ffb453;font-weight:950}
 .download-panel{display:grid;grid-template-columns:1fr auto;gap:22px;align-items:center;max-width:980px;margin:24px auto;padding:28px;border-radius:28px;background:var(--card);border:1px solid var(--line);box-shadow:var(--shadow);text-align:left}
 .download-panel h3{font-size:28px;margin:0 0 14px}
 .download-panel ul{margin:0;padding-left:18px;color:var(--muted);line-height:1.9}
